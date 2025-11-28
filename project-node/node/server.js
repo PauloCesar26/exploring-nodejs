@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(session({secret: 'anfdjkfjdkhfdsdgoyitgj'}));
+app.use(express.static("./../ui/user/public"));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../ui"));

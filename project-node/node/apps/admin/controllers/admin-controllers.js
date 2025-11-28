@@ -50,10 +50,11 @@ export const makeLogout = (req, res) => {
 }
 
 export const registerUser = (req, res) => {
-    const {nome , email} = req.body;
-    const sql = "INSERT INTO infoUsers (nome, email) VALUES (?, ?)";
+    const {nome, email} = req.body;
+    const imageName = req.file.filename;
+    const sql = "INSERT INTO infoUsers (userImg, nome, email) VALUES (?, ?, ?)";
 
-    db.query(sql, [nome, email], (err, result) => {
+    db.query(sql, [imageName, nome, email], (err, result) => {
         if(err){
             console.error("Erro ao inserir:", err);
             return res.status(500).send(err);

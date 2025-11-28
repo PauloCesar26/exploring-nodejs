@@ -3,6 +3,7 @@ use db_test_node2;
 
 create table infoUsers(
 id int AUTO_INCREMENT,
+userImg varchar(255),
 nome varchar(100),
 email varchar(100),
 primary key(id)
@@ -20,3 +21,5 @@ VALUES ('paulo', '123456');
 
 SELECT * FROM infoUsers;
 SELECT * FROM adminApp;
+
+DROP TABLE infoUsers;
