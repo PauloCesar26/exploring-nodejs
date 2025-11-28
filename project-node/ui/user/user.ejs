@@ -10,9 +10,10 @@
     <% if(user && user.length > 0) { %>
        <% console.log(user) %>
       <% user.forEach(users => { %>
-        <li>
+        <div>
+          <img src="/uploads/<%= users.userImg %>" width="50" height="50">
           <%= users.nome %> - <%= users.email %>
-        </li>
+        </div>
       <% }) %>
     <% } else { %>
       <li>Nenhum user encontrado</li>

@@ -12,6 +12,7 @@
       <% user.forEach(users => { %>
         <li>
           <form action="/admin/manage-user/delete/<%= users.id %>" method="post">
+            <img src="/uploads/<%= users.userImg %>" width="50" height="50">
             <%= users.nome %> - <%= users.email %>
             <button>Delete</button>
           </form>
